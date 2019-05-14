@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 gem 'devise'
+gem 'webpacker', '~> 4.x'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
