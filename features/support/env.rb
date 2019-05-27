@@ -18,8 +18,6 @@ Capybara.register_driver :selenium do |app|
     }
   )
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: caps)
-
-  # Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
 ActionController::Base.allow_rescue = false
