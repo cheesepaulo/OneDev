@@ -1,3 +1,8 @@
+Dado "que existem {int} portfólio(s) cadastrado(s) de outros usuários" do |count|
+  create_list(:portfolio, count)
+end
+
+
 Dado "possui {int} portfólio(s) cadastrado(s)" do |count|
   create_list(:portfolio, count, user_id: @user.id)
 end
