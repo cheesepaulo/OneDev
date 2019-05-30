@@ -26,7 +26,7 @@
             </div>
 
             <div class="col l2 m2 s6 center">
-              <label class="font_16 custom-grey-text text-darken-1">Listado <i class="fa fa-info-circle tooltipped"data-tooltip="Aparece nas pesquisas por candidatos"></i></label>
+              <label class="font_16 custom-grey-text text-darken-1">Listado <i class="fa fa-info-circle tooltipped" data-tooltip="Aparece nas pesquisas por candidatos"></i></label>
               <div class="switch">
                 <label>
                   <input name="portfolio[listed]" v-model="portfolio.listed" type="checkbox" @change="update()" />
@@ -37,9 +37,11 @@
           </div>
 
           <div class="row">
+
             <div class="col l4 m8 s8">
-              <Tags :portfolio-id="portfolio.id" :portfolio-tags="portfolio.tags" />
+                <Tags :portfolio-id="portfolio.id" :portfolio-tags="portfolio.tags" />
             </div>
+
             <div class="input-field col l2 offset-m1 m4 offset-s4 s4">
               <label>
                 <input name="portfolio[remote_ok]" v-model="portfolio.remote_ok" type="checkbox" class="filled-in" @change="update()" />
@@ -56,10 +58,12 @@
 
 <script>
 
+import Tags from './tags.vue'
+
 const url = new URL(document.location)
 
 export default {
-  components: {  },
+  components: { Tags },
 
   data() {
     return {

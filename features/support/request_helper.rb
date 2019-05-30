@@ -1,8 +1,8 @@
 module RequestHelper
-  def wait_for_ajax(seconds: 1)
+  def wait_for_ajax(seconds: 0.5)
     loop do
-      break if finished_all_ajax_requests? && finished_all_vue_resource_requests?
       sleep seconds
+      break if finished_all_ajax_requests? && finished_all_vue_resource_requests?
     end
   end
 
