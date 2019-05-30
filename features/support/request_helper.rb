@@ -1,5 +1,5 @@
 module RequestHelper
-  def wait_for_ajax(seconds: 0.5)
+  def wait_for_ajax(seconds: 0.05)
     loop do
       sleep seconds
       break if finished_all_ajax_requests? && finished_all_vue_resource_requests?
